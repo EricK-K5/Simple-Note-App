@@ -15,17 +15,16 @@ $currentUser = current_user();
 <header>
 	<h1>Simple Notes App</h1>
 	<nav>
-			<a class="secondary" href="?page=notes_list">Ghi chú</a>
-			<a class="primary" href="?page=notes_create">+ Tạo mới</a>
+		<a href="?page=notes_list">Ghi chú</a>
+		<a href="?page=notes_create">Tạo mới</a>
 		<?php if ($currentUser): ?>
-				<span class="status-pill">Xin chào, <?= htmlspecialchars($currentUser['username']) ?></span>
-				<a class="ghost" href="?page=logout">Đăng xuất</a>
+			<span>Xin chào, <?= htmlspecialchars($currentUser['username']) ?></span>
+			<a href="?page=logout">Đăng xuất</a>
 		<?php else: ?>
-				<a class="ghost" href="?page=login">Đăng nhập</a>
-				<a class="ghost" href="?page=register">Đăng ký</a>
+			<a href="?page=login">Đăng nhập</a>
+			<a href="?page=register">Đăng ký</a>
 		<?php endif; ?>
 	</nav>
-	</div>
 </header>
 <main>
 
