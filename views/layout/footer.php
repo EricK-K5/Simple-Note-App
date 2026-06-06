@@ -5,11 +5,11 @@
 <footer class="app-footer">
 	<div class="footer-shell">
 		<div class="footer-grid">
-			<div>
+			<div class="footer-panel">
 				<h3 class="footer-heading">Simple Notes App</h3>
 				<p class="footer-copy">Một không gian nhỏ gọn để ghi chú, theo dõi ý tưởng và quay lại công việc dang dở nhanh hơn.</p>
 			</div>
-			<div>
+			<div class="footer-panel">
 				<h4 class="footer-heading">Điểm mạnh</h4>
 				<div class="footer-badges">
 					<span class="footer-badge">Nhanh</span>
@@ -21,7 +21,7 @@
 		</div>
 		<div class="footer-bottom">
 			<p class="footer-copy">&copy; <?= date('Y') ?> Simple Notes App</p>
-			<p class="footer-copy">Built for quick capture and clear focus.</p>
+			
 		</div>
 	</div>
 </footer>

@@ -4,6 +4,7 @@
 
 require_once __DIR__ . '/../controllers/AuthController.php';
 require_once __DIR__ . '/../controllers/NoteController.php';
+require_once __DIR__ . '/../controllers/CategoryController.php';
 
 $page = $_GET['page'] ?? 'notes_list';
 
@@ -48,6 +49,17 @@ switch ($page) {
 		break;
 	case 'notes_show':
 		NoteController::show();
+		break;
+
+	// Categories
+	case 'categories_list':
+		CategoryController::index();
+		break;
+	case 'categories_store':
+		CategoryController::store();
+		break;
+	case 'categories_show':
+		CategoryController::show();
 		break;
 
 	default:

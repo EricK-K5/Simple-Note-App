@@ -232,6 +232,7 @@ main form {
   border-radius: 20px;
   padding: 1rem;
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
+  text-align: center;
 }
 
 form {
@@ -239,6 +240,7 @@ form {
   gap: 1rem;
   width: min(100%, 640px);
   margin: 0 auto;
+  justify-items: center;
 }
 
 .auth-form {
@@ -270,6 +272,9 @@ label {
   gap: 0.45rem;
   font-weight: 600;
   color: var(--text);
+  width: 100%;
+  justify-items: center;
+  text-align: center;
 }
 
 input,
@@ -293,6 +298,12 @@ select:focus {
 
 ul {
   padding-left: 1.2rem;
+}
+
+main ul {
+  list-style-position: inside;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 li + li {
@@ -338,11 +349,17 @@ footer {
   align-items: stretch;
 }
 
-.footer-grid > div {
+.footer-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.9rem;
+  min-height: 100%;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(99, 115, 129, 0.14);
+  border-radius: 22px;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
 }
 
 .footer-heading {
@@ -395,6 +412,63 @@ footer {
   font-size: 0.95rem;
 }
 
+.category-form {
+  width: 100%;
+  margin: 0;
+}
+
+.section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.section-head h3 {
+  margin: 0;
+}
+
+.section-meta {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.category-grid,
+.note-list {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.category-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.category-card,
+.note-item {
+  display: grid;
+  gap: 0.3rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(99, 115, 129, 0.14);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.04);
+  text-decoration: none;
+  color: var(--text);
+}
+
+.category-card strong,
+.note-item strong {
+  font-size: 1rem;
+}
+
+.category-card span,
+.note-item span {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -442,6 +516,10 @@ footer {
 
   .footer-bottom {
     flex-direction: column;
+  }
+
+  .section-head {
+    align-items: flex-start;
   }
 }
 

@@ -16,6 +16,7 @@ $currentUser = current_user();
 	<h1>Simple Notes App</h1>
 	<nav>
 		<a href="?page=notes_list">Ghi chú</a>
+		<a href="?page=categories_list">Danh mục</a>
 		<a href="?page=notes_create">Tạo mới</a>
 		<?php if ($currentUser): ?>
 			<span>Xin chào, <?= htmlspecialchars($currentUser['username']) ?></span>
